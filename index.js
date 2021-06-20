@@ -6,7 +6,7 @@ const app = express();
 const APP_PORT = process.env.APP_PORT || 8081;
 
 app.use(cors());
-conn()
+conn() // health check
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.listen(APP_PORT, () => console.log(`Server Listening on Port ${APP_PORT}`));

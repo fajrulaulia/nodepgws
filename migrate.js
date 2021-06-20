@@ -9,6 +9,8 @@ const dbConfig = {
   port: 5432,
 }
 
+console.log("Migrating to database", process.env.PG_DATABASE)
+
 const client = new pg.Client(dbConfig)
 client.connect()
 migrate({ client }, "./migrations").then((res) => {
