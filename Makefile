@@ -4,7 +4,7 @@ export APP_PORT=8081
 export PG_HOST=localhost
 export PG_USER=pgwsuser
 export PG_PASSWORD=pgwspass
-export PG_DATABASE=ruangbawah
+export PG_DATABASE=pgwsdb
 
 
 local-run:
