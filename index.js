@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const route = require('./src/route')
-const { DriverDb } = require('./src/services/driver')
+const { DriverDb } = require('./services/driver')
 const app = express();
 const APP_PORT = process.env.APP_PORT || 8081;
 

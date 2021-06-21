@@ -1,4 +1,4 @@
-const { DriverDb } = require("../../services/driver")
+const { DriverDb } = require("../../../services/driver")
 module.exports = {
   insert: (payload) => {
     const query = `INSERT INTO users

@@ -1,6 +1,6 @@
 // ...rest of the initial code omitted for simplicity.
 const { body } = require('express-validator');
-const validate = require("../../services/validator")
+const validate = require("../../../services/validator")
 
 module.exports = {
   register: [

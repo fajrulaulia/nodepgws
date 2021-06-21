@@ -1,5 +1,5 @@
 const Model = require("./user-model")
-const security = require("../../services/security")
+const security = require("../../../services/security")
 
 module.exports = {
   login: (req, res) => {

@@ -1,7 +1,6 @@
 
 const express = require('express')
-const validator = require('./services/validator')
-const security = require('./services/security')
+const validator = require('../services/validator')
 
 const UserController = require('./controller/user/user-controller')
 const UserValidator = require('./controller/user/user-validator')
