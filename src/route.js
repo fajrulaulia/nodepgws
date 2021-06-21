@@ -8,5 +8,5 @@ const Route = express.Router()
 
 module.exports = Route
   .post("/login", UserController.login)
-  .post("/register", UserValidator.register, validator, UserController.register)
+  .post("/register", UserValidator.register, validator.validate, UserController.register)
 
