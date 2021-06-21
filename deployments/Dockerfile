@@ -13,6 +13,7 @@ RUN npm install
 
 COPY src/ src/
 COPY migrations/ migrations/
+COPY services/ services/
 COPY index.js .
 COPY migrate.js .
 COPY deployments/setup.sh .
