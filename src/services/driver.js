@@ -1,7 +1,7 @@
 const { Client } = require('pg')
 
 module.exports = {
-  conn: () => {
+  DriverDb: () => {
     const client = new Client({
       connectionLimit: 10,
       host: process.env.PG_HOST,

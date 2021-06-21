@@ -1,5 +1,5 @@
 const { validationResult } = require('express-validator');
-const { conn } = require("./driver")
+const { DriverDb } = require("./driver")
 
 module.exports = {
   validate: (req, res, next) => {
@@ -14,7 +14,7 @@ module.exports = {
     next()
   },
   check: async (table, column, value) => {
-    const result = await conn().query(`select exists(select true from ${table} where ${column}=$1) `, [value])
+    const result = await DriverDb().query(`select exists(select true from ${table} where ${column}=$1) `, [value])
     return result.rows[0].exists
   }
 }
