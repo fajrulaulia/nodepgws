@@ -10,6 +10,7 @@ This Framework uses NodeJS with javascript as the programming language, this is 
   - Storage
   - Auth Standard
   - Docker Image Build and Run
+  - PostgreSQL Driver
 
 ## Development Mode
 for development mode, you just need to clone this project and edit Database server Configuration and set it up.
