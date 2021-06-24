@@ -70,5 +70,15 @@ module.exports = {
         }
       }
     })
-  }
+  },
+  getCurrentUser: (req) => {
+    if (req.headers.authorization && req.headers.authorization !== undefined && req.headers.authorization.split(" ").length === 2) {
+      try {
+        return jwt.decode(req.headers.authorization.split(" ")[1], 'secret')
+      } catch (error) {
+        return null
+      }
+    }
+    return null
+  },
 }
