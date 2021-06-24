@@ -9,7 +9,7 @@ module.exports = {
     Model.login(payload)
       .then((result) => {
         if (result.rows.length !== 1) {
-          res.status(400).json({ success: false, message: "Account Not Found" })
+          res.status(401).json({ success: false, message: "Account Not Found" })
         }
 
         if (result.rows[0] && result.rows[0].passkey) {
@@ -19,7 +19,7 @@ module.exports = {
               security.sign(res, result.rows[0].passkey)
               res.status(200).json({ success: true, message: "Login Success", data: result.rows[0] })
             } else {
-              res.status(200).json({ success: true, message: "Account Not Found" })
+              res.status(401).json({ success: true, message: "Account Not Found" })
             }
           }).catch((error) => {
             console.log("[error] => ", error)
