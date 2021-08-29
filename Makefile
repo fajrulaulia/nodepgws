@@ -2,9 +2,10 @@ export APP_NAME=nodepgws
 export APP_PORT=8081
 
 export PG_HOST=localhost
-export PG_USER=pgwsuser
-export PG_PASSWORD=pgwspass
-export PG_DATABASE=pgwsdb
+export PG_USER=psql_user
+export PG_PASSWORD=psql_pass
+export PG_DATABASE=psql_db
+export PG_PORT=7654
 
 
 local-run:
@@ -24,4 +25,5 @@ image-run:
 	--env PG_USER=${PG_USER} \
 	--env PG_PASSWORD=${PG_PASSWORD} \
 	--env PG_DATABASE=${PG_DATABASE} \
+	--env PG_PORT=${PG_PORT} \
 	--net=host ${APP_NAME} .

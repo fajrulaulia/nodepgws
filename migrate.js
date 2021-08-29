@@ -6,7 +6,7 @@ const dbConfig = {
   user: process.env.PG_USER,
   password: process.env.PG_PASSWORD,
   host: process.env.PG_HOST,
-  port: 5432,
+  port: process.env.PG_PORT,
 }
 
 console.log("Migrating to database", process.env.PG_DATABASE)
